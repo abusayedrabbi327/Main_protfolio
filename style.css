@@ -1,5 +1,4 @@
 :root {
-  
   --bg-primary: #0b0f19;
   --bg-surface: #111827;
   --bg-surface-hover: #1b2438;
@@ -26,7 +25,6 @@
 }
 
 [data-theme="light"] {
-  
   --bg-primary: #f8fafc;
   --bg-surface: #ffffff;
   --bg-surface-hover: #f1f5f9;
@@ -56,6 +54,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -66,11 +65,14 @@ body {
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -78,13 +80,14 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 clamp(1rem, 3.5vw, 2rem);
 }
 
 .font-mono {
@@ -114,16 +117,17 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4.5rem;
+  height: clamp(3.75rem, 7vw, 4.5rem);
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .brand-logo .dot {
@@ -133,7 +137,7 @@ button {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(0.75rem, 1.8vw, 1.5rem);
 }
 
 .nav-link {
@@ -152,7 +156,7 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .theme-btn {
@@ -161,6 +165,8 @@ button {
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: var(--radius-md);
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -177,17 +183,21 @@ button {
   display: none;
   font-size: 1.25rem;
   padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
   color: var(--text-primary);
+  align-items: center;
+  justify-content: center;
 }
 
 .section {
-  padding: 6rem 0;
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
   position: relative;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .section-badge {
@@ -207,7 +217,7 @@ button {
 }
 
 .section-title {
-  font-size: 2.25rem;
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -215,26 +225,28 @@ button {
 
 .section-desc {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: clamp(0.92rem, 1.5vw, 1.05rem);
   max-width: 600px;
   margin: 0.75rem auto 0;
+  line-height: 1.6;
 }
 
 .hero-section {
-  padding-top: 9rem;
-  padding-bottom: 6rem;
+  padding-top: clamp(6.5rem, 11vw, 9rem);
+  padding-bottom: clamp(3.5rem, 6vw, 6rem);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.95fr;
-  gap: 3.5rem;
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.88fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
   align-items: center;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .hero-image-wrap {
@@ -242,12 +254,13 @@ button {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .hero-image-card {
   position: relative;
   width: 100%;
-  max-width: 360px;
+  max-width: clamp(260px, 30vw, 360px);
   border-radius: 24px;
   padding: 8px;
   background: linear-gradient(145deg, rgba(6, 182, 212, 0.2), rgba(59, 130, 246, 0.08), var(--bg-surface));
@@ -273,7 +286,9 @@ button {
 
 .hero-avatar {
   width: 100%;
-  height: 440px;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  max-height: 460px;
   object-fit: cover;
   object-position: center 10%;
   border-radius: 18px;
@@ -288,10 +303,12 @@ button {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.82rem);
   font-weight: 500;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  align-self: flex-start;
+  max-width: 100%;
 }
 
 .status-dot {
@@ -300,21 +317,23 @@ button {
   border-radius: 50%;
   background: var(--accent-emerald);
   box-shadow: 0 0 10px var(--accent-emerald);
+  flex-shrink: 0;
 }
 
 .hero-greeting {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
   font-weight: 600;
   color: var(--accent-cyan);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .hero-heading {
-  font-size: 3rem;
+  font-size: clamp(2.15rem, 4.5vw + 0.5rem, 3.4rem);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.03em;
   margin-bottom: 1.25rem;
+  word-break: break-word;
 }
 
 .typewriter-cursor {
@@ -333,7 +352,7 @@ button {
 }
 
 .hero-bio {
-  font-size: 1.1rem;
+  font-size: clamp(0.98rem, 1.2vw + 0.4rem, 1.12rem);
   color: var(--text-secondary);
   line-height: 1.7;
   max-width: 650px;
@@ -343,8 +362,8 @@ button {
 .hero-cta-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
 }
 
 .btn {
@@ -353,10 +372,12 @@ button {
   justify-content: center;
   gap: 0.6rem;
   padding: 0.85rem 1.6rem;
+  min-height: 44px;
   border-radius: var(--radius-md);
   font-size: 0.95rem;
   font-weight: 600;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -384,8 +405,9 @@ button {
 
 .hero-socials {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  gap: 0.65rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-color);
 }
@@ -393,14 +415,16 @@ button {
 .social-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
+  gap: 0.45rem;
+  font-size: clamp(0.78rem, 1.8vw, 0.85rem);
   color: var(--text-secondary);
   transition: var(--transition);
-  padding: 0.4rem 0.8rem;
+  padding: 0.45rem 0.75rem;
+  min-height: 38px;
   border-radius: var(--radius-sm);
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
+  white-space: nowrap;
 }
 
 .social-link:hover {
@@ -412,11 +436,11 @@ button {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: clamp(2rem, 4vw, 3.5rem);
 }
 
 .about-text {
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 1.2vw + 0.3rem, 1.05rem);
   color: var(--text-secondary);
   line-height: 1.8;
 }
@@ -432,7 +456,7 @@ button {
 }
 
 .edu-card {
-  padding: 1.5rem;
+  padding: clamp(1.2rem, 2.5vw, 1.5rem);
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -449,6 +473,8 @@ button {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 .edu-num {
@@ -465,7 +491,7 @@ button {
 }
 
 .edu-institution {
-  font-size: 1.1rem;
+  font-size: clamp(1.05rem, 2vw, 1.15rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
@@ -478,12 +504,12 @@ button {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
 }
 
 .skill-card {
-  padding: 1.75rem;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -539,15 +565,15 @@ button {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.75rem;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -578,7 +604,7 @@ button {
 }
 
 .project-title {
-  font-size: 1.35rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.35rem);
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
@@ -622,6 +648,8 @@ button {
   justify-content: space-between;
   padding-top: 1rem;
   border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .project-link {
@@ -632,6 +660,7 @@ button {
   font-weight: 600;
   color: var(--accent-cyan);
   transition: var(--transition);
+  padding: 0.25rem 0;
 }
 
 .project-link:hover {
@@ -640,12 +669,12 @@ button {
 
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 .activity-card {
-  padding: 1.75rem;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -658,7 +687,7 @@ button {
 }
 
 .activity-org {
-  font-size: 1.15rem;
+  font-size: clamp(1.05rem, 2vw, 1.15rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
@@ -680,7 +709,7 @@ button {
 .contact-box {
   max-width: 720px;
   margin: 0 auto;
-  padding: 3rem 2.5rem;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 2.5rem);
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -689,14 +718,14 @@ button {
 }
 
 .contact-box h3 {
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 3.5vw, 1.85rem);
   font-weight: 800;
   margin-bottom: 0.75rem;
 }
 
 .contact-box p {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
   margin-bottom: 2rem;
 }
 
@@ -707,17 +736,20 @@ button {
   gap: 0.75rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .email-display {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 1.05rem;
+  font-size: clamp(0.85rem, 2.2vw, 1.05rem);
   font-weight: 600;
   color: var(--text-primary);
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem clamp(0.75rem, 2vw, 1.2rem);
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
+  max-width: 100%;
+  word-break: break-all;
 }
 
 .copy-btn {
@@ -729,6 +761,7 @@ button {
   font-weight: 600;
   color: var(--text-primary);
   transition: var(--transition);
+  min-height: 44px;
 }
 
 .copy-btn:hover {
@@ -746,10 +779,12 @@ button {
 
 .scroll-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: clamp(1.25rem, 3vw, 2rem);
+  right: clamp(1.25rem, 3vw, 2rem);
   width: 3rem;
   height: 3rem;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -779,10 +814,11 @@ button {
   display: none;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 960px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.25rem;
+    text-align: left;
   }
 
   .hero-image-wrap {
@@ -791,41 +827,36 @@ button {
   }
 
   .hero-image-card {
-    max-width: 280px;
+    max-width: 290px;
     margin: 0 auto;
-  }
-
-  .hero-avatar {
-    height: 340px;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.25rem;
   }
+}
 
-  .hero-heading {
-    font-size: 2.35rem;
-  }
-
+@media (max-width: 868px) {
   .nav-menu {
     display: none;
   }
 
   .mobile-toggle {
-    display: block;
+    display: flex;
   }
 
   .mobile-drawer {
     display: none;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     background: var(--bg-surface);
     border-bottom: 1px solid var(--border-color);
     position: absolute;
-    top: 4.5rem;
+    top: 100%;
     left: 0;
     right: 0;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
   }
 
   .mobile-drawer.open {
@@ -833,8 +864,40 @@ button {
   }
 
   .mobile-drawer .nav-link {
-    padding: 0.75rem 0;
+    padding: 0.85rem 0;
     font-size: 1.05rem;
     border-bottom: 1px solid var(--border-color);
+  }
+
+  .mobile-drawer .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .email-copy-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .copy-btn {
+    width: 100%;
+  }
+
+  .contact-box .hero-cta-group {
+    flex-direction: column;
+  }
+
+  .contact-box .btn {
+    width: 100%;
   }
 }
