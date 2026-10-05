@@ -1,0 +1,8 @@
+# Ignore markdown notes and drafts
+*.md
+
+# OS / IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

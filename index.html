@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abu Sayed Rabbi — Software Engineer | Full-Stack, AI/ML &amp; Cybersecurity</title>
+  <meta name="description" content="Official portfolio of Abu Sayed Rabbi. Software Engineer specializing in Full-Stack development, AI/ML, intrusion detection systems, and scalable backend architecture." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#hero" class="brand-logo">
+        Abu Sayed Rabbi<span class="dot">.</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#activities" class="nav-link">Activities</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">
+          <span id="theme-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </span>
+        </button>
+
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation drawer">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer">
+      <a href="#about" class="nav-link mobile-link">About</a>
+      <a href="#skills" class="nav-link mobile-link">Skills</a>
+      <a href="#projects" class="nav-link mobile-link">Projects</a>
+      <a href="#research" class="nav-link mobile-link">Research</a>
+      <a href="#activities" class="nav-link mobile-link">Activities</a>
+      <a href="#contact" class="nav-link mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Open for Software, Backend &amp; AI Roles</span>
+          </div>
+
+          <p class="hero-greeting">Hi, I'm Abu Sayed Rabbi</p>
+          
+          <h1 class="hero-heading">
+            <span class="text-gradient" id="typing-text">Software Engineer</span>
+            <span class="typewriter-cursor"></span>
+          </h1>
+
+          <p class="hero-bio">
+            Computer Science and Engineering student graduating in 2026 at <strong>United International University (UIU)</strong>, Dhaka. Specializing in full-stack development, AI/ML workflows, intrusion detection systems, and scalable backend architecture.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+              <span>View Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Get In Touch</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/abusayedrabbi327" target="_blank" rel="noopener noreferrer" class="social-link font-mono">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              <span>github.com/abusayedrabbi327</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/abu-sayed-rabbi-915541226/" target="_blank" rel="noopener noreferrer" class="social-link font-mono">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="mailto:abusayed102188@gmail.com" class="social-link font-mono">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-image-card">
+            <img src="profile.jpg" alt="Abu Sayed Rabbi — Software Engineer" class="hero-avatar" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Profile</span>
+          <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+          <p class="section-desc">Academic background and software engineering philosophy.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a Computer Science and Engineering student graduating in 2026 with academic research and hands-on project experience across cybersecurity, intrusion detection, machine learning, full-stack systems, and backend development.
+            </p>
+            <p>
+              Experienced in developing React and Node.js applications, REST APIs, authentication systems, SQL databases, real-time communication features, and ML pipelines with Explainable AI (SHAP &amp; LIME).
+            </p>
+            <p>
+              Interested in software engineering, backend development, AI/ML, and cybersecurity roles where I can build reliable, scalable, and secure systems.
+            </p>
+          </div>
+
+          <div class="edu-timeline">
+            <div class="edu-card">
+              <div class="edu-card-header">
+                <span class="edu-num">01</span>
+                <span class="edu-period">2022 – Present</span>
+              </div>
+              <h3 class="edu-institution">United International University</h3>
+              <p class="edu-degree">Bachelor of Science in Computer Science and Engineering</p>
+              <p class="font-mono" style="font-size: 0.8rem; color: var(--accent-cyan); margin-top: 0.25rem;">CGPA: 2.79 • Dhaka, Bangladesh</p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-header">
+                <span class="edu-num">02</span>
+                <span class="edu-period">2020</span>
+              </div>
+              <h3 class="edu-institution">Cantonment College, Jashore</h3>
+              <p class="edu-degree">Higher Secondary Certificate (HSC) – Science</p>
+              <p class="font-mono" style="font-size: 0.8rem; color: var(--accent-cyan); margin-top: 0.25rem;">GPA: 5.00 • Bangladesh</p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-header">
+                <span class="edu-num">03</span>
+                <span class="edu-period">2018</span>
+              </div>
+              <h3 class="edu-institution">Bayezid Line High School, Chittagong</h3>
+              <p class="edu-degree">Secondary School Certificate (SSC) – Science</p>
+              <p class="font-mono" style="font-size: 0.8rem; color: var(--accent-cyan); margin-top: 0.25rem;">GPA: 4.67 • Bangladesh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Capabilities</span>
+          <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+          <p class="section-desc">Languages, frameworks, databases, and tools applied in projects and research.</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Programming</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">C / C++</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Bash</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Frontend &amp; Backend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">Flask</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">HTML5 / CSS3</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">AI/ML &amp; Cybersecurity</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">SHAP &amp; LIME</span>
+              <span class="skill-tag">Pandas &amp; NumPy</span>
+              <span class="skill-tag">NIDS / HIDS</span>
+              <span class="skill-tag">PCAP Analysis</span>
+              <span class="skill-tag">JWT / bcrypt</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Databases &amp; DevOps</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">SQLite</span>
+              <span class="skill-tag">Git &amp; GitHub</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Engineering</span>
+          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-desc">Production-grade software platforms, desktop suites, and full-stack systems.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Full-Stack • 2026</span>
+              <h3 class="project-title">Thikana</h3>
+              <p class="project-subtitle">Full-Stack Marketplace &amp; Property Platform</p>
+              <p class="project-desc">
+                Built a marketplace and property platform with buyer, seller, and admin workflows. Implemented listings, cart, checkout, orders, reviews, role-based access control, database migrations, and real-time text/voice chat using Socket.IO.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-item">React</span>
+                <span class="project-tech-item">Node.js</span>
+                <span class="project-tech-item">Express.js</span>
+                <span class="project-tech-item">PostgreSQL</span>
+                <span class="project-tech-item">Socket.IO</span>
+                <span class="project-tech-item">JWT</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/abusayedrabbi327/Thikana3" target="_blank" rel="noopener noreferrer" class="project-link font-mono">
+                <span>View on GitHub</span>
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">FinTech &amp; AI • 2024–2025</span>
+              <h3 class="project-title">Pocket Guru</h3>
+              <p class="project-subtitle">Personal Finance &amp; Consultant Platform</p>
+              <p class="project-desc">
+                Built a personal finance platform for expense tracking, budgeting, savings goals, and analytics. Implemented authentication, user dashboards, financial goals, consultant profiles, bookings, interactive charts, and real-time consultant chat.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-item">React</span>
+                <span class="project-tech-item">TypeScript</span>
+                <span class="project-tech-item">Vite</span>
+                <span class="project-tech-item">Tailwind CSS</span>
+                <span class="project-tech-item">React Router</span>
+                <span class="project-tech-item">Recharts</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/abusayedrabbi327/Pocket_Guru" target="_blank" rel="noopener noreferrer" class="project-link font-mono">
+                <span>View on GitHub</span>
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Desktop Systems • 2024</span>
+              <h3 class="project-title">FENDER v3.5</h3>
+              <p class="project-subtitle">Desktop File Management &amp; Analytics Suite</p>
+              <p class="project-desc">
+                Built a desktop application for duplicate detection, file search, folder analysis, and safe file deletion. Used QThread/QThreadPool for responsive background scanning, batch operations, file previews, bookmarks, analytics dashboards, and CSV/TXT exports.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-item">Python</span>
+                <span class="project-tech-item">PyQt5</span>
+                <span class="project-tech-item">xxhash</span>
+                <span class="project-tech-item">QThread</span>
+                <span class="project-tech-item">PyMuPDF</span>
+                <span class="project-tech-item">Pillow</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/abusayedrabbi327/FENDER" target="_blank" rel="noopener noreferrer" class="project-link font-mono">
+                <span>View on GitHub</span>
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Web Architecture • 2026</span>
+              <h3 class="project-title">Developer Portfolio</h3>
+              <p class="project-subtitle">High-Performance Static Portfolio &amp; CI/CD</p>
+              <p class="project-desc">
+                Built and deployed a responsive, portable static portfolio using Astro, React, TypeScript, and Tailwind CSS with structured profile data and GitHub Actions CI/CD automated deployment.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-item">Astro</span>
+                <span class="project-tech-item">React</span>
+                <span class="project-tech-item">TypeScript</span>
+                <span class="project-tech-item">Tailwind CSS</span>
+                <span class="project-tech-item">Docker</span>
+                <span class="project-tech-item">GitHub Actions</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/abusayedrabbi327/Portfolio_Sayed-" target="_blank" rel="noopener noreferrer" class="project-link font-mono">
+                <span>View on GitHub</span>
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Academic Research</span>
+          <h2 class="section-title">Research &amp; <span class="text-gradient">Publications</span></h2>
+          <p class="section-desc">Explainable AI (XAI) and host/network intrusion detection frameworks.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Final Year Design Project • 2025–2026</span>
+              <h3 class="project-title">AEGIS</h3>
+              <p class="project-subtitle">Explainable Host &amp; Network Intrusion Detection Framework</p>
+              <p class="project-desc">
+                Designed a cybersecurity framework for analyzing network traffic and host/system events. Worked on telemetry collection, feature engineering, machine-learning classification, and SHAP/LIME-based explanations to make intrusion-detection results easier to interpret.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-item">Python</span>
+                <span class="project-tech-item">SHAP / LIME</span>
+                <span class="project-tech-item">XAI</span>
+                <span class="project-tech-item">Network Defense</span>
+                <span class="project-tech-item">Host Telemetry</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Ongoing Process Before Submission • 2025–2026</span>
+              <h3 class="project-title">RT-XNIDS</h3>
+              <p class="project-subtitle">Real-Time Explainable Network Intrusion Detection System</p>
+              <p class="project-desc">
+                Built a real-time network IDS using Scapy for packet capture and in-memory flow construction. Engineered six lightweight traffic features, trained a 6 → 64 → 32 → 2 MLP classifier, integrated a selective XAI gate, and developed a Streamlit live alert dashboard achieving ~99.83% offline accuracy with sub-millisecond latency.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-item">Python</span>
+                <span class="project-tech-item">Scikit-learn</span>
+                <span class="project-tech-item">Scapy</span>
+                <span class="project-tech-item">Pandas</span>
+                <span class="project-tech-item">Wireshark</span>
+                <span class="project-tech-item">Streamlit</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/abusayedrabbi327/RT-XNIDS" target="_blank" rel="noopener noreferrer" class="project-link font-mono">
+                <span>View on GitHub</span>
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-badge">Submitted Wiley Security and Privacy • 2025–2026</span>
+              <h3 class="project-title">HIDS</h3>
+              <p class="project-subtitle">Host-Based Intrusion Detection System</p>
+              <p class="project-desc">
+                Random Forest classifier with 100 estimators, protected StandardScaler pipeline, SHAP-based waterfall plots for SOC analysts, and Dynamic Baseline Calibration. Achieved 7.49 ms inference latency and 99.99% accuracy (10-fold CV on CIC-MalMem-2022 dataset).
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-item">Python</span>
+                <span class="project-tech-item">Scikit-learn</span>
+                <span class="project-tech-item">SHAP</span>
+                <span class="project-tech-item">CIC-MalMem-2022</span>
+                <span class="project-tech-item">99.99% Accuracy</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="activities">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Leadership</span>
+          <h2 class="section-title">Leadership &amp; <span class="text-gradient">Activities</span></h2>
+          <p class="section-desc">University leadership, club coordination, and executive contributions.</p>
+        </div>
+
+        <div class="activities-grid">
+          
+          <div class="activity-card">
+            <h3 class="activity-org">UIU English Language Forum</h3>
+            <p class="activity-role">Former Treasurer and Organizing Co-head • United International University</p>
+            <p class="activity-desc">
+              Supported budgeting, vendor coordination, and event operations. Helped organize university events and student conferences.
+            </p>
+          </div>
+
+          <div class="activity-card">
+            <h3 class="activity-org">UIU Theater and Film Club</h3>
+            <p class="activity-role">Former Head of IT and Media Publications • United International University</p>
+            <p class="activity-desc">
+              Supported digital infrastructure, event technology, ticketing, multimedia, and production systems. Managed the official Facebook page of the club and designed promotional posters.
+            </p>
+          </div>
+
+          <div class="activity-card">
+            <h3 class="activity-org">UIU Robotics Club</h3>
+            <p class="activity-role">Former Senior Executive, Event Management • United International University</p>
+            <p class="activity-desc">
+              Participated in hardware-software integration, sensor telemetry, and microcontroller activities. Supported Python/C++ programming sessions for junior members.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <span class="section-badge">Get In Touch</span>
+          <h3>Let's Connect &amp; Collaborate</h3>
+          <p>
+            Whether you have a software engineering opportunity, research inquiry, or project discussion, my inbox is always open.
+          </p>
+
+          <div class="email-copy-bar">
+            <span class="email-display">abusayed102188@gmail.com</span>
+            <button id="copy-email-btn" class="copy-btn">Copy Email</button>
+          </div>
+
+          <div class="hero-cta-group" style="justify-content: center; margin-bottom: 0;">
+            <a href="mailto:abusayed102188@gmail.com?subject=Hello%20Abu%20Sayed%20%E2%80%93%20From%20Your%20Portfolio" class="btn btn-primary">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Send Me an Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/abu-sayed-rabbi-915541226/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <span>Connect on LinkedIn</span>
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-left: 4px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Abu Sayed Rabbi. Built for simplicity, speed, and elegance.</p>
+    </div>
+  </footer>
+
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
